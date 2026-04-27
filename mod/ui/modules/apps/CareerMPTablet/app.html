@@ -1,0 +1,882 @@
+<div class="bngApp careermp-tablet" style="width:100%;height:100%;overflow:hidden;">
+  <div class="tablet" id="tablet">
+
+    <!-- ===== Header ===== -->
+    <header class="header">
+      <div class="header-brand">
+        <span class="label">CareerMP Network</span>
+        <span class="title">Career Tablet</span>
+      </div>
+      <div class="header-stats">
+        <div class="stat-chip">
+          <span class="stat-label">₿ BeamBucks</span>
+          <span class="stat-value" id="header-balance">4,970</span>
+        </div>
+        <div class="stat-chip">
+          <span class="stat-label">⚡ XP</span>
+          <span class="stat-value" id="header-xp">65</span>
+        </div>
+        <div class="stat-chip">
+          <span class="stat-label">🎰 Bonus</span>
+          <span class="stat-value" id="header-bonus">0</span>
+        </div>
+        <div class="stat-chip">
+          <span class="stat-label">🚗 Vehicle</span>
+          <span class="stat-value" id="header-vehicle">Ibishu Covet</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== Main Layout ===== -->
+    <div class="main-layout">
+
+      <!-- Sidebar Navigation -->
+      <nav class="sidebar" id="sidebar">
+        <div class="nav-item active" data-page="home">
+          <span class="nav-title">Home</span>
+          <span class="nav-sub">Dashboard</span>
+        </div>
+        <div class="nav-item" data-page="jobs">
+          <span class="nav-title">Jobs</span>
+          <span class="nav-sub">Available work</span>
+        </div>
+        <div class="nav-item" data-page="tasks">
+          <span class="nav-title">Tasks</span>
+          <span class="nav-sub">Missions & goals</span>
+        </div>
+        <div class="nav-item" data-page="vehicles">
+          <span class="nav-title">Vehicles</span>
+          <span class="nav-sub">Garage & fleet</span>
+        </div>
+        <div class="nav-item" data-page="map">
+          <span class="nav-title">Map</span>
+          <span class="nav-sub">Navigation</span>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <div class="nav-item" data-page="recovery">
+          <span class="nav-title">Recovery</span>
+          <span class="nav-sub">Roadside assist</span>
+        </div>
+        <div class="nav-item" data-page="profile">
+          <span class="nav-title">Profile</span>
+          <span class="nav-sub">Stats & rank</span>
+        </div>
+        <div class="nav-item" data-page="settings">
+          <span class="nav-title">Settings</span>
+          <span class="nav-sub">Preferences</span>
+        </div>
+      </nav>
+
+      <!-- Content Area -->
+      <main class="content" id="content">
+
+        <!-- ========== HOME ========== -->
+        <div class="page active" id="page-home">
+          <div class="status-banner">
+            <div class="banner-label">Career Status</div>
+            <div class="banner-title" id="home-status-title">Online — West Coast, USA</div>
+            <div class="banner-desc">Connected to CareerMP server. Your local save is synced and active.</div>
+          </div>
+
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">Active Job</span>
+                <span class="card-badge ready">In Progress</span>
+              </div>
+              <div class="card-value" id="home-active-job">Cargo Delivery</div>
+              <div class="card-desc">Deliver industrial parts to Belasco City — 3.2 km remaining</div>
+              <div class="progress-bar">
+                <div class="progress-fill amber" style="width: 65%"></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">Current Vehicle</span>
+              </div>
+              <div class="card-value" style="font-size:20px;">🚗 Ibishu Covet</div>
+              <div class="card-desc">Economy Hatchback</div>
+            </div>
+          </div>
+
+          <div class="section-title">Career Paths</div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">🏁 Motorsports</span>
+                <span class="card-badge pending">Level 1</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill amber" style="width: 15%"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">⭐ Special</span>
+                <span class="card-badge pending">Level 1</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill blue" style="width: 10%"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">🚛 Commercial</span>
+                <span class="card-badge pending">Level 1</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill green" style="width: 20%"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">🔬 Experimental</span>
+                <span class="card-badge pending">Level 1</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill red" style="width: 5%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-title">Recent Activity</div>
+          <div id="home-activity">
+            <div class="activity-item">
+              <div class="activity-icon success">✓</div>
+              <div class="activity-text">Cargo Run — Industrial Parts to Belasco</div>
+              <div class="activity-amount positive">+$350</div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon success">✓</div>
+              <div class="activity-text">Time Trial — Highway Sprint</div>
+              <div class="activity-amount positive">+$180</div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon fail">✗</div>
+              <div class="activity-text">Vehicle Delivery — Failed (damage)</div>
+              <div class="activity-amount negative">-$75</div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon success">✓</div>
+              <div class="activity-text">Parcel Delivery — Express Package</div>
+              <div class="activity-amount positive">+$220</div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon info">i</div>
+              <div class="activity-text">Insurance payment — Monthly premium</div>
+              <div class="activity-amount negative">-$150</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== JOBS ========== -->
+        <div class="page" id="page-jobs">
+          <div class="facility-header">
+            <div class="facility-header-left">
+              <div class="facility-mode-label">Delivery Mode</div>
+              <div class="facility-name-display" id="facility-name">Belasco City Garage</div>
+            </div>
+            <div class="facility-header-right">
+              <div class="facility-stats">
+                <span>⚡ 65</span>
+                <span>🎰 0</span>
+                <span>₿ 4,970.07</span>
+              </div>
+              <div class="facility-reputation" id="facility-rep">🤝 Neutral</div>
+            </div>
+          </div>
+          <div class="facility-selector">
+            <div class="facility-chip active" data-facility="belasco-garage">Belasco City Garage</div>
+            <div class="facility-chip" data-facility="fast-auto">Fast Automotive</div>
+            <div class="facility-chip" data-facility="jerry-riggs">Jerry Riggs</div>
+            <div class="facility-chip" data-facility="industrial">Industrial Warehouse</div>
+            <div class="facility-chip" data-facility="turbo-burger">Turbo Burger</div>
+            <div class="facility-chip" data-facility="shuffleboard">Shuffleboard Logistics</div>
+          </div>
+          <div class="subtab-bar" id="jobs-subtab-bar">
+            <button class="subtab active" data-subtab="facility-info">Facility Info</button>
+            <button class="subtab" data-subtab="parcel-delivery">Parcel Delivery</button>
+            <button class="subtab" data-subtab="car-jockey">Car Jockey</button>
+            <button class="subtab" data-subtab="trailer-delivery">Trailer Delivery</button>
+            <button class="subtab" data-subtab="materials-delivery">Materials Delivery</button>
+            <button class="subtab" data-subtab="all-cargo">All Cargo</button>
+            <button class="subtab" data-subtab="loaner-vehicles">Loaner Vehicles</button>
+          </div>
+          <div class="jobs-layout">
+            <div class="jobs-main">
+              <div class="subtab-page active" id="subtab-facility-info">
+                <div class="jobs-columns">
+                  <div class="jobs-col">
+                    <div class="facility-info-block">
+                      <div class="fi-title">🤝 Reputation: Neutral (lvl 0)</div>
+                      <div class="progress-bar">
+                        <div class="progress-fill amber" style="width: 0%"></div>
+                      </div>
+                    </div>
+                    <div class="facility-info-block" style="margin-top:16px;">
+                      <div class="fi-title">📋 Facility Information</div>
+                      <div class="fi-desc">Belasco Garage: Cheap prices, friendly staff, and the building has two
+                        entrances, so you can just drive through it.</div>
+                      <div class="fi-desc" style="margin-top:8px;font-style:italic;color:var(--text-muted);">Established
+                        only a few years ago when the map of WCUSA first released, it was an instant success with
+                        players.</div>
+                    </div>
+                  </div>
+                  <div class="jobs-col">
+                    <div class="facility-info-block">
+                      <div class="fi-title">📦 Cargo Delivery: Level 1</div>
+                      <div class="fi-subtitle">0 XP</div>
+                      <div class="fi-desc">Deliver parcels, fluids, dry bulk in containers, or haul small and large
+                        trailers.</div>
+                      <div class="fi-jobs-grid">
+                        <div class="fi-job-card">
+                          <div class="fi-job-name">📦 Parcel Delivery</div>
+                          <div class="fi-job-count">× 1</div>
+                        </div>
+                        <div class="fi-job-card">
+                          <div class="fi-job-name">🚛 Trailer Delivery</div>
+                          <div class="fi-job-count">× 0</div>
+                        </div>
+                        <div class="fi-job-card">
+                          <div class="fi-job-name">🧱 Materials Delivery</div>
+                          <div class="fi-job-count">× 0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="jobs-col">
+                    <div class="facility-info-block">
+                      <div class="fi-title">🚗 Car Jockey</div>
+                      <div class="fi-subtitle">0 XP</div>
+                      <div class="fi-desc">Drive a wide variety of vehicles safely to their destination.</div>
+                    </div>
+                    <div class="facility-info-block" style="margin-top:16px;">
+                      <div class="fi-title">🔧 Services</div>
+                      <div class="fi-desc">ℹ Earn reputation to increase rewards. Loan vehicles to use as delivery
+                        vehicle.</div>
+                      <div class="fi-jobs-grid" style="margin-top:8px;">
+                        <div class="fi-job-card">
+                          <div class="fi-job-name">🚙 Loaner Vehicles</div>
+                          <div class="fi-job-count">× 0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="subtab-page" id="subtab-parcel-delivery">
+                <div class="subtab-header-row">
+                  <div>
+                    <div class="fi-title">📦 Parcel Delivery</div>
+                    <div class="fi-desc">Deliver small and large parcels all over the map.</div>
+                  </div>
+                  <div class="sort-controls">
+                    <span>🏷 Grouping: Destinations</span>
+                    <span>⚙ Sorting: Rewards</span>
+                  </div>
+                </div>
+                <div class="subtab-tutorial">
+                  <div class="fi-title" style="font-size:13px;">Parcel Delivery Tutorial</div>
+                  <div class="tutorial-checklist">
+                    <div class="tutorial-step">☐ Install a cargo container in your vehicle.<br><small>Visit a garage and
+                        select "Veh Customization", then "Cargo parts".</small></div>
+                    <div class="tutorial-step">☐ Load the Tutorial Package into your vehicle.<br><small>Inspect the
+                        cargo in front of the Belasco City Garage.</small></div>
+                    <div class="tutorial-step">☐ Deliver cargo to the destination.<br><small>Drop off the cargo at Jerry
+                        Riggs.</small></div>
+                  </div>
+                </div>
+                <div class="list-item">
+                  <div class="list-item-info">
+                    <div class="list-item-title">Jerry Riggs</div>
+                    <div class="list-item-meta"><span>📍 1.4 mi</span></div>
+                    <div style="margin-top:6px;">
+                      <span class="cargo-tag">Tutorial Package</span>
+                      <span class="cargo-reward">₿ 22.57</span>
+                      <span class="cargo-count">×1</span>
+                    </div>
+                    <div style="font-size:10px;color:var(--accent-red);margin-top:4px;">ℹ No Space</div>
+                  </div>
+                </div>
+              </div>
+              <div class="subtab-page" id="subtab-car-jockey">
+                <div class="subtab-header-row">
+                  <div>
+                    <div class="fi-title">🚗 Car Jockey</div>
+                    <div class="fi-desc">Drive vehicles to repair jobs or bring them to private residences.</div>
+                  </div>
+                  <div class="sort-controls">
+                    <span>🏷 Grouping: Destinations</span>
+                    <span>⚙ Sorting: Rewards</span>
+                  </div>
+                </div>
+                <div class="jobs-empty-state">
+                  <div style="font-size:32px;margin-bottom:8px;">🚗</div>
+                  <div style="font-size:14px;font-weight:600;color:var(--text-secondary);">No car jockey jobs available
+                    at this facility right now.</div>
+                </div>
+              </div>
+              <div class="subtab-page" id="subtab-trailer-delivery">
+                <div class="subtab-header-row">
+                  <div>
+                    <div class="fi-title">🚛 Trailer Delivery</div>
+                    <div class="fi-desc">Tow small and large trailers to where they are needed.</div>
+                  </div>
+                  <div class="sort-controls">
+                    <span>🏷 Grouping: Destinations</span>
+                    <span>⚙ Sorting: Rewards</span>
+                  </div>
+                </div>
+                <div class="jobs-empty-state">
+                  <div style="font-size:32px;margin-bottom:8px;">🚛</div>
+                  <div style="font-size:14px;font-weight:600;color:var(--text-secondary);">No trailer delivery jobs
+                    available at this facility right now.</div>
+                </div>
+              </div>
+              <div class="subtab-page" id="subtab-materials-delivery">
+                <div class="subtab-header-row">
+                  <div>
+                    <div class="fi-title">🧱 Materials Delivery</div>
+                    <div class="fi-desc">Deliver large amounts of fluids and dry bulk as orders or in custom sizes.
+                    </div>
+                  </div>
+                  <div class="sort-controls">
+                    <span>🏷 Grouping: Cargo Type</span>
+                    <span>⚙ Sorting: Rewards</span>
+                  </div>
+                </div>
+                <div class="jobs-empty-state">
+                  <div style="font-size:32px;margin-bottom:8px;">🧱</div>
+                  <div style="font-size:14px;font-weight:600;color:var(--text-secondary);">You do not have any
+                    containers installed that can load this type of cargo.</div>
+                </div>
+              </div>
+              <div class="subtab-page" id="subtab-all-cargo">
+                <div class="subtab-header-row">
+                  <div>
+                    <div class="fi-title">📋 All Cargo</div>
+                    <div class="fi-desc">Showing all cargo this facility has to offer.</div>
+                  </div>
+                  <div class="sort-controls">
+                    <span>🏷 Grouping: Cargo Type</span>
+                    <span>⚙ Sorting: Rewards</span>
+                  </div>
+                </div>
+                <div style="margin-top:12px;">
+                  <div class="fi-title" style="font-size:12px;margin-bottom:8px;">Parcel</div>
+                  <div class="list-item">
+                    <div class="list-item-info">
+                      <div class="list-item-title">Tutorial Package</div>
+                      <div style="display:flex;gap:8px;align-items:center;margin-top:4px;">
+                        <span class="cargo-reward">₿ 22.57</span>
+                        <span class="cargo-count">×1</span>
+                      </div>
+                      <div style="font-size:10px;color:var(--accent-red);margin-top:4px;">ℹ No Space</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="subtab-page" id="subtab-loaner-vehicles">
+                <div class="subtab-header-row">
+                  <div>
+                    <div class="fi-title">🚙 Loaner Vehicles</div>
+                    <div class="fi-desc">Loan vehicles from this organization to use for delivering other cargo.</div>
+                  </div>
+                  <div class="sort-controls">
+                    <span>🏷 Grouping: Vehicle Type</span>
+                    <span>⚙ Sorting: Id</span>
+                  </div>
+                </div>
+                <div class="jobs-empty-state">
+                  <div style="font-size:32px;margin-bottom:8px;">🚙</div>
+                  <div style="font-size:14px;font-weight:600;color:var(--text-secondary);">No loaner vehicles available.
+                  </div>
+                  <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">Increase your reputation at this
+                    facility to unlock loaner vehicles.</div>
+                </div>
+              </div>
+            </div>
+            <div class="my-cargo-sidebar">
+              <div class="my-cargo-header">
+                <span class="fi-title" style="color:var(--accent-primary);">📦 My Cargo</span>
+              </div>
+              <div class="fi-desc">Check your loaded cargo and other delivery-related tasks.</div>
+              <div class="sort-controls" style="margin-top:8px;">
+                <span>🏷 Grouping: Tasklist</span>
+                <span>⚙ Sorting: Id</span>
+              </div>
+              <div class="my-cargo-empty">
+                <div style="font-size:11px;color:var(--text-muted);padding:16px 0;text-align:center;">
+                  ℹ You do not have any containers installed that can load this type of cargo.
+                </div>
+                <button class="btn btn-primary" style="width:100%;justify-content:center;font-size:11px;">❓ How do I
+                  install cargo containers?</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== TASKS ========== -->
+        <div class="page" id="page-tasks">
+          <div class="status-banner">
+            <div class="banner-label">Career / West Coast, USA</div>
+            <div class="banner-title">Missions &amp; Challenges</div>
+            <div class="banner-desc">Racing, stunts, and challenge missions. Delivery jobs are in the Jobs tab.</div>
+          </div>
+          <div class="section-title">📋 Active Missions</div>
+          <div class="card-grid single">
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">🏁 Time Trial — Cell Tower Road</span>
+                <span class="card-badge ready">In Progress</span>
+              </div>
+              <div class="card-desc">Complete the route as fast as possible. Beat the target times for star rewards.
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill amber" style="width: 35%"></div>
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+                <span class="card-badge pending" style="font-size:10px;">🥉 Bronze</span>
+                <span class="card-badge pending" style="font-size:10px;">🥈 Silver</span>
+                <span class="card-badge pending" style="font-size:10px;">🥇 Gold</span>
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-primary">Navigate</button>
+                <button class="btn btn-outline">Retry</button>
+              </div>
+            </div>
+          </div>
+          <div class="section-title">🗂 Mission Types — West Coast, USA</div>
+          <div class="card-grid triple">
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">🏁 Time Trials</span><span
+                  class="card-badge ready">55</span></div>
+              <div class="card-desc">Race against the clock on various routes</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">🏎 AI Races</span><span
+                  class="card-badge ready">9</span></div>
+              <div class="card-desc">Circuit and sprint races vs AI opponents</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">🎯 Drift</span><span class="card-badge ready">9</span>
+              </div>
+              <div class="card-desc">Score points with controlled drifts</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">🏗 Drag Strip</span><span
+                  class="card-badge ready">9</span></div>
+              <div class="card-desc">Quarter-mile acceleration runs at APM</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">🚔 Chase</span><span class="card-badge ready">8</span>
+              </div>
+              <div class="card-desc">Pursue or be pursued across the map</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">📦 Arrive</span><span class="card-badge ready">7</span>
+              </div>
+              <div class="card-desc">Drive to the destination without damage</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">🏁 Drag Races</span><span
+                  class="card-badge ready">6</span></div>
+              <div class="card-desc">Head-to-head drag racing events</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">🚨 Evade</span><span class="card-badge ready">6</span>
+              </div>
+              <div class="card-desc">Escape and hide from pursuers</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">🏔 Crawl</span><span class="card-badge ready">5</span>
+              </div>
+              <div class="card-desc">Off-road rock crawling challenges</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">🔑 Collection</span><span
+                  class="card-badge ready">5</span></div>
+              <div class="card-desc">Collect scattered items across the area</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">🎯 Precision Park</span><span
+                  class="card-badge ready">5</span></div>
+              <div class="card-desc">Park perfectly in tight spots</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">💨 Knock Away</span><span
+                  class="card-badge ready">5</span></div>
+              <div class="card-desc">Smash targets off the road</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">⛽ Hypermiling</span><span
+                  class="card-badge ready">3</span></div>
+              <div class="card-desc">Maximize fuel efficiency on routes</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">🎪 Long Jump</span><span
+                  class="card-badge ready">2</span></div>
+              <div class="card-desc">Launch off ramps for maximum distance</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">🎯 Target Jump</span><span
+                  class="card-badge ready">2</span></div>
+              <div class="card-desc">Land on target zones after jumps</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">🐦 Cannon</span><span class="card-badge ready">1</span>
+              </div>
+              <div class="card-desc">Pigeon-launching cannon challenge</div>
+            </div>
+          </div>
+          <div class="section-title">📈 Mission Summary</div>
+          <div class="card-grid single">
+            <div class="card">
+              <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+                <div style="text-align:center;flex:1;min-width:80px;">
+                  <div style="font-size:24px;font-weight:800;color:var(--accent-yellow);">140</div>
+                  <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">Total Missions</div>
+                </div>
+                <div style="text-align:center;flex:1;min-width:80px;">
+                  <div style="font-size:24px;font-weight:800;color:var(--accent-green);">16</div>
+                  <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">Mission Types</div>
+                </div>
+                <div style="text-align:center;flex:1;min-width:80px;">
+                  <div style="font-size:24px;font-weight:800;color:var(--accent-blue);">23</div>
+                  <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">In Jobs Tab</div>
+                </div>
+                <div style="text-align:center;flex:1;min-width:80px;">
+                  <div style="font-size:24px;font-weight:800;color:var(--text-secondary);">0</div>
+                  <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">Completed</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== VEHICLES ========== -->
+        <div class="page" id="page-vehicles">
+          <div class="status-banner">
+            <div class="banner-label">Garage</div>
+            <div class="banner-title">Your Fleet</div>
+            <div class="banner-desc">Manage your vehicles, check condition, and handle repairs.</div>
+          </div>
+          <div class="section-title">Current Vehicle (Spawned)</div>
+          <div class="vehicle-card">
+            <div class="vehicle-name">Ibishu Covet</div>
+            <div class="vehicle-type">Economy Hatchback</div>
+            <div class="vehicle-stats">
+              <div class="vehicle-stat"><span class="vs-label">Body</span><span class="vs-value good">95%</span></div>
+              <div class="vehicle-stat"><span class="vs-label">Engine</span><span class="vs-value good">100%</span>
+              </div>
+              <div class="vehicle-stat"><span class="vs-label">Tyres</span><span class="vs-value good">88%</span></div>
+              <div class="vehicle-stat"><span class="vs-label">Fuel</span><span class="vs-value good">92%</span></div>
+            </div>
+          </div>
+          <div class="section-title">Garage (1 Stored)</div>
+          <div class="vehicle-card">
+            <div class="vehicle-name">Ibishu Pessima</div>
+            <div class="vehicle-type">Economy Sedan • 1996</div>
+            <div class="vehicle-stats">
+              <div class="vehicle-stat"><span class="vs-label">Body</span><span class="vs-value warn">71%</span></div>
+              <div class="vehicle-stat"><span class="vs-label">Engine</span><span class="vs-value good">85%</span></div>
+              <div class="vehicle-stat"><span class="vs-label">Tyres</span><span class="vs-value bad">32%</span></div>
+              <div class="vehicle-stat"><span class="vs-label">Fuel</span><span class="vs-value warn">45%</span></div>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-primary">Repair Vehicle</button>
+              <button class="btn btn-outline">View Parts</button>
+              <button class="btn btn-outline">Insurance</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== MAP ========== -->
+        <div class="page" id="page-map">
+          <div class="status-banner">
+            <div class="banner-label">Career / West Coast, USA</div>
+            <div class="banner-title">Career POIs</div>
+            <div class="banner-desc">All facilities and points of interest on the map.</div>
+          </div>
+          <div class="map-container">
+            <div style="position:relative;z-index:1;text-align:center;">
+              <div style="font-size:48px;margin-bottom:8px;">🗺️</div>
+              <div style="font-size:15px;font-weight:600;color:var(--text-secondary);">Map View</div>
+              <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">Connects to BeamNG navigation in-game
+              </div>
+            </div>
+          </div>
+          <div class="section-title">🚗 Player Vehicles</div>
+          <div class="card-grid single">
+            <div class="list-item">
+              <div class="list-item-info">
+                <div class="list-item-title">Ibishu Covet</div>
+                <div class="list-item-meta">
+                  <span>🚗 Economy Hatchback</span>
+                  <span>📍 Current vehicle</span>
+                </div>
+              </div>
+              <button class="btn btn-outline" style="font-size:11px;">Locate</button>
+            </div>
+          </div>
+          <div class="section-title">🏪 Dealerships</div>
+          <div class="card-grid">
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">Belasco Auto</span><span
+                  class="card-badge ready">Open</span></div>
+              <div class="card-desc">New & used vehicles for the modern driver. Fees: $799</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">Jefferson Motors</span><span
+                  class="card-badge ready">Open</span></div>
+              <div class="card-desc">Quality used vehicle sales. Fees: $649</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">Rich's Motor Company</span><span
+                  class="card-badge ready">Open</span></div>
+              <div class="card-desc">Prestige auto sales — the finest quality vehicles. Fees: $1,250</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">Quarryside Auto Sales</span><span
+                  class="card-badge ready">Open</span></div>
+              <div class="card-desc">Once thriving dealership, now only used vehicles. Fees: $249</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">Commercial Vehicle Sales</span><span
+                  class="card-badge ready">Open</span></div>
+              <div class="card-desc">Trucks, trailers, transport & heavy machinery. Fees: $1,449</div>
+            </div>
+          </div>
+          <div class="section-title">🔧 Garages & Computers</div>
+          <div class="card-grid">
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">Garage Computer</span><span
+                  class="card-badge ready">Available</span></div>
+              <div class="card-desc">Vehicle & parts management, shopping, insurance</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">Office Computer</span><span
+                  class="card-badge ready">Available</span></div>
+              <div class="card-desc">Vehicle & parts shopping</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">Commercial Garage — Large</span><span
+                  class="card-badge ready">Available</span></div>
+              <div class="card-desc">Full vehicle & parts management for large vehicles</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">Commercial Garage — Small</span><span
+                  class="card-badge ready">Available</span></div>
+              <div class="card-desc">Full vehicle & parts management for small vehicles</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-header"><span class="card-title">Alder Dragway Tuning</span><span
+                  class="card-badge ready">Available</span></div>
+              <div class="card-desc">Vehicle tuning & parts at the dragway</div>
+            </div>
+          </div>
+          <div class="section-title">⛽ Gas Stations</div>
+          <div class="card-grid triple">
+            <div class="card" style="cursor:pointer;">
+              <div class="card-title" style="font-size:13px;font-weight:700;margin-bottom:4px;">Service Station</div>
+              <div class="card-desc">Gas, Diesel, EV</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-title" style="font-size:13px;font-weight:700;margin-bottom:4px;">Highway Station</div>
+              <div class="card-desc">Gas, Diesel</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-title" style="font-size:13px;font-weight:700;margin-bottom:4px;">Tyranos Island</div>
+              <div class="card-desc">Gas, Diesel, EV</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-title" style="font-size:13px;font-weight:700;margin-bottom:4px;">Apex Commercial</div>
+              <div class="card-desc">Gas, Diesel</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-title" style="font-size:13px;font-weight:700;margin-bottom:4px;">Mountain Station</div>
+              <div class="card-desc">Gas, Diesel</div>
+            </div>
+            <div class="card" style="cursor:pointer;">
+              <div class="card-title" style="font-size:13px;font-weight:700;margin-bottom:4px;">KEVee Chargers</div>
+              <div class="card-desc">Electric only</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== RECOVERY ========== -->
+        <div class="page" id="page-recovery">
+          <div class="recovery-hero">
+            <div class="hero-icon">🚨</div>
+            <div class="hero-title">Recovery Service</div>
+            <div class="hero-desc">Stuck, flipped, or broken down? Use the recovery service to get back on the road.
+            </div>
+            <div class="btn-group" style="justify-content:center;">
+              <button class="btn btn-primary">📍 Recover to Nearest Road</button>
+            </div>
+          </div>
+          <div class="section-title">Garage Tow</div>
+          <div class="card-grid single">
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">🔧 Tow to Garage</span>
+                <span class="card-badge ready">Available</span>
+              </div>
+              <div class="card-desc">Tow your vehicle to a garage for immediate repairs. Select your destination:</div>
+              <div style="margin-top:10px;">
+                <select
+                  style="width:100%;padding:8px 12px;background:rgba(0,0,0,0.3);border:1px solid var(--border-card);border-radius:var(--radius-sm);color:var(--text-primary);font-family:inherit;font-size:12px;">
+                  <option>Belasco City Garage — $120</option>
+                  <option>Fast Automotive — $150</option>
+                  <option>Jerry Riggs — $95</option>
+                  <option>Commercial Garage (Large) — $200</option>
+                  <option>Commercial Garage (Small) — $180</option>
+                </select>
+              </div>
+              <div class="btn-group" style="margin-top:12px;">
+                <button class="btn btn-primary">Confirm Tow</button>
+              </div>
+            </div>
+          </div>
+          <div class="section-title">Recovery Mod (Coming Soon)</div>
+          <div class="card-grid single">
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">Advanced Recovery</span>
+                <span class="card-badge offline">Not Installed</span>
+              </div>
+              <div class="card-desc">The Recovery Mod will add tow trucks, flatbed trailers, winches, and a full
+                roadside assistance system. Stay tuned!</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== PROFILE ========== -->
+        <div class="page" id="page-profile">
+          <div class="profile-header">
+            <div class="profile-avatar">PC</div>
+            <div class="profile-info">
+              <div class="profile-name" id="profile-name">PapiCheesecake_DEV</div>
+              <!-- todo - make this reference from the (beamng data location)\current\settings\cloud\saves\(current save) -->
+              <div class="profile-server">Server Name</div>
+              <!-- // todo - make this use the actual server name you are connected to -->
+            </div>
+          </div>
+          <div class="card-grid triple">
+            <div class="card">
+              <div class="card-header"><span class="card-title">₿ BeamBucks</span></div>
+              <div class="card-value" style="color:var(--accent-green);">4,970.07</div>
+            </div>
+            <div class="card">
+              <div class="card-header"><span class="card-title">⚡ XP</span></div>
+              <div class="card-value">65</div>
+            </div>
+            <div class="card">
+              <div class="card-header"><span class="card-title">🎰 Bonus Coins</span></div>
+              <div class="card-value">0</div>
+            </div>
+          </div>
+          <div class="section-title">Career Paths</div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card-header"><span class="card-title">🏁 Motorsports</span><span
+                  class="card-badge pending">Level 1</span></div>
+              <div class="card-desc">Racing, time trials, drag events</div>
+              <div class="progress-bar">
+                <div class="progress-fill amber" style="width: 15%"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header"><span class="card-title">⭐ Special</span><span class="card-badge pending">Level
+                  1</span></div>
+              <div class="card-desc">Unique challenges and scenarios</div>
+              <div class="progress-bar">
+                <div class="progress-fill blue" style="width: 10%"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header"><span class="card-title">🚛 Commercial</span><span
+                  class="card-badge pending">Level 1</span></div>
+              <div class="card-desc">Deliveries, cargo runs, transport</div>
+              <div class="progress-bar">
+                <div class="progress-fill green" style="width: 20%"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header"><span class="card-title">🔬 Experimental</span><span
+                  class="card-badge pending">Level 1</span></div>
+              <div class="card-desc">Stunts, destruction, wild rides</div>
+              <div class="progress-bar">
+                <div class="progress-fill red" style="width: 5%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="section-title">Earnings History</div>
+          <div id="profile-history">
+            <div class="activity-item">
+              <div class="activity-icon success">✓</div>
+              <div class="activity-text">Today — 7 jobs completed</div>
+              <div class="activity-amount positive">+$2,350</div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon success">✓</div>
+              <div class="activity-text">Yesterday — 5 jobs completed</div>
+              <div class="activity-amount positive">+$1,890</div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon info">i</div>
+              <div class="activity-text">2 days ago — Insurance & repairs</div>
+              <div class="activity-amount negative">-$420</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== SETTINGS ========== -->
+        <div class="page" id="page-settings">
+          <div class="status-banner">
+            <div class="banner-label">Configuration</div>
+            <div class="banner-title">Tablet Settings</div>
+            <div class="banner-desc">Customize your tablet experience and manage mod integrations.</div>
+          </div>
+          <div class="section-title">Tablet</div>
+          <div class="setting-row">
+            <div class="setting-info"><span class="setting-label">Reposition Mode</span><span class="setting-desc">Click
+                and drag to move the tablet around the screen</span></div>
+            <div class="toggle" id="toggle-reposition" onclick="toggleSwitch(this)"></div>
+          </div>
+          <div class="setting-row">
+            <div class="setting-info"><span class="setting-label">Resize Mode</span><span class="setting-desc">Drag the
+                edges to resize the tablet window</span></div>
+            <div class="toggle" id="toggle-resize" onclick="toggleSwitch(this)"></div>
+          </div>
+          <div class="section-title">Display</div>
+          <div class="setting-row">
+            <div class="setting-info"><span class="setting-label">Distance in Miles</span><span
+                class="setting-desc">Switch distance units from kilometers to miles</span></div>
+            <div class="toggle" id="toggle-miles" onclick="toggleSwitch(this)"></div>
+          </div>
+          <div class="setting-row">
+            <div class="setting-info"><span class="setting-label">Notifications</span><span class="setting-desc">Show
+                on-screen alerts for job updates, earnings, and events</span></div>
+            <div class="toggle on" id="toggle-notifications" onclick="toggleSwitch(this)"></div>
+          </div>
+          <div class="section-title">About</div>
+          <div class="card" style="margin-top:8px;">
+            <div class="card-desc">
+              <strong>CareerMP Tablet</strong> v0.1.0<br>
+              By PapiCheesecake<br><br>
+              Built for BeamNG.drive, BeamMP & CareerMP.<br>
+              <a class="link-accent" href="https://github.com/StanleyDudek/CareerMP" target="_blank">CareerMP on
+                GitHub</a>
+            </div>
+          </div>
+        </div>
+
+
+      </main>
+    </div>
+  </div>
+</div>

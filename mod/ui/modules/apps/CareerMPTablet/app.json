@@ -1,0 +1,22 @@
+{
+  "domElement": "<career-mp-tablet></career-mp-tablet>",
+  "name": "CareerMP Tablet",
+  "types": [
+    "ui.apps.categories.info"
+  ],
+  "description": "Career management tablet — jobs, missions, vehicles, recovery & more",
+  "css": {
+    "left": "50px",
+    "top": "50px",
+    "height": "620px",
+    "width": "960px",
+    "min-width": "600px",
+    "min-height": "400px"
+  },
+  "author": "PapiCheesecake",
+  "version": "0.1.0",
+  "directive": "careerMpTablet",
+  "category": "CareerMP Tablet",
+  "isAuxiliary": false,
+  "interactive": "yes"
+}

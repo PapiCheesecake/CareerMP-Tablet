@@ -1,0 +1,11 @@
+{
+  "toggle_careermp_tablet": {
+    "cat": "general",
+    "order": 0,
+    "ctx": "tlua",
+    "onDown": "extensions.career_careerMPTablet.toggleTablet()",
+    "title": "Toggle CareerMP Tablet",
+    "desc": "Show or hide the CareerMP career management tablet",
+    "isBasic": true
+  }
+}
