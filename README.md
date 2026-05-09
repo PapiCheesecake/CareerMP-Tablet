@@ -16,7 +16,7 @@ CareerMP Tablet is a UI overlay for the CareerMP mod in BeamNG.drive. It provide
 ## Requirements
 
 - BeamMP
-- CareerMP
+- CareerMP -- todo
 
 ## Installation
 
