@@ -59,6 +59,9 @@
           <span class="nav-title">Recovery</span>
           <span class="nav-sub">Roadside assist</span>
         </div>
+        
+        <div class="sidebar-divider"></div>
+        
         <div class="nav-item" data-page="profile">
           <span class="nav-title">Profile</span>
           <span class="nav-sub">Stats & rank</span>
@@ -597,159 +600,103 @@
         <!-- ========== MAP ========== -->
         <div class="page" id="page-map">
           <div class="status-banner">
-            <div class="banner-label">Career / West Coast, USA</div>
+            <div class="banner-label" id="map-banner-label">Career / Unknown Map</div>
             <div class="banner-title">Career POIs</div>
             <div class="banner-desc">All facilities and points of interest on the map.</div>
           </div>
-          <div class="map-container">
-            <div style="position:relative;z-index:1;text-align:center;">
-              <div style="font-size:48px;margin-bottom:8px;">🗺️</div>
-              <div style="font-size:15px;font-weight:600;color:var(--text-secondary);">Map View</div>
-              <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">Connects to BeamNG navigation in-game
-              </div>
-            </div>
+          <div class="map-container" id="map-minimap-area">
+            <canvas id="map-canvas" style="width:100%;height:100%;display:block;border-radius:12px;"></canvas>
           </div>
           <div class="section-title">🚗 Player Vehicles</div>
-          <div class="card-grid single">
-            <div class="list-item">
-              <div class="list-item-info">
-                <div class="list-item-title">Ibishu Covet</div>
-                <div class="list-item-meta">
-                  <span>🚗 Economy Hatchback</span>
-                  <span>📍 Current vehicle</span>
-                </div>
-              </div>
-              <button class="btn btn-outline" style="font-size:11px;">Locate</button>
-            </div>
+          <div class="card-grid single" id="map-vehicles-list">
+            <!-- Dynamically populated -->
           </div>
           <div class="section-title">🏪 Dealerships</div>
-          <div class="card-grid">
-            <div class="card" style="cursor:pointer;">
-              <div class="card-header"><span class="card-title">Belasco Auto</span><span
-                  class="card-badge ready">Open</span></div>
-              <div class="card-desc">New & used vehicles for the modern driver. Fees: $799</div>
-            </div>
-            <div class="card" style="cursor:pointer;">
-              <div class="card-header"><span class="card-title">Jefferson Motors</span><span
-                  class="card-badge ready">Open</span></div>
-              <div class="card-desc">Quality used vehicle sales. Fees: $649</div>
-            </div>
-            <div class="card" style="cursor:pointer;">
-              <div class="card-header"><span class="card-title">Rich's Motor Company</span><span
-                  class="card-badge ready">Open</span></div>
-              <div class="card-desc">Prestige auto sales — the finest quality vehicles. Fees: $1,250</div>
-            </div>
-            <div class="card" style="cursor:pointer;">
-              <div class="card-header"><span class="card-title">Quarryside Auto Sales</span><span
-                  class="card-badge ready">Open</span></div>
-              <div class="card-desc">Once thriving dealership, now only used vehicles. Fees: $249</div>
-            </div>
-            <div class="card" style="cursor:pointer;">
-              <div class="card-header"><span class="card-title">Commercial Vehicle Sales</span><span
-                  class="card-badge ready">Open</span></div>
-              <div class="card-desc">Trucks, trailers, transport & heavy machinery. Fees: $1,449</div>
-            </div>
+          <div class="card-grid" id="map-dealerships-list">
+            <!-- Dynamically populated -->
           </div>
           <div class="section-title">🔧 Garages & Computers</div>
-          <div class="card-grid">
-            <div class="card" style="cursor:pointer;">
-              <div class="card-header"><span class="card-title">Garage Computer</span><span
-                  class="card-badge ready">Available</span></div>
-              <div class="card-desc">Vehicle & parts management, shopping, insurance</div>
-            </div>
-            <div class="card" style="cursor:pointer;">
-              <div class="card-header"><span class="card-title">Office Computer</span><span
-                  class="card-badge ready">Available</span></div>
-              <div class="card-desc">Vehicle & parts shopping</div>
-            </div>
-            <div class="card" style="cursor:pointer;">
-              <div class="card-header"><span class="card-title">Commercial Garage — Large</span><span
-                  class="card-badge ready">Available</span></div>
-              <div class="card-desc">Full vehicle & parts management for large vehicles</div>
-            </div>
-            <div class="card" style="cursor:pointer;">
-              <div class="card-header"><span class="card-title">Commercial Garage — Small</span><span
-                  class="card-badge ready">Available</span></div>
-              <div class="card-desc">Full vehicle & parts management for small vehicles</div>
-            </div>
-            <div class="card" style="cursor:pointer;">
-              <div class="card-header"><span class="card-title">Alder Dragway Tuning</span><span
-                  class="card-badge ready">Available</span></div>
-              <div class="card-desc">Vehicle tuning & parts at the dragway</div>
-            </div>
-          </div>
-          <div class="section-title">⛽ Gas Stations</div>
-          <div class="card-grid triple">
-            <div class="card" style="cursor:pointer;">
-              <div class="card-title" style="font-size:13px;font-weight:700;margin-bottom:4px;">Service Station</div>
-              <div class="card-desc">Gas, Diesel, EV</div>
-            </div>
-            <div class="card" style="cursor:pointer;">
-              <div class="card-title" style="font-size:13px;font-weight:700;margin-bottom:4px;">Highway Station</div>
-              <div class="card-desc">Gas, Diesel</div>
-            </div>
-            <div class="card" style="cursor:pointer;">
-              <div class="card-title" style="font-size:13px;font-weight:700;margin-bottom:4px;">Tyranos Island</div>
-              <div class="card-desc">Gas, Diesel, EV</div>
-            </div>
-            <div class="card" style="cursor:pointer;">
-              <div class="card-title" style="font-size:13px;font-weight:700;margin-bottom:4px;">Apex Commercial</div>
-              <div class="card-desc">Gas, Diesel</div>
-            </div>
-            <div class="card" style="cursor:pointer;">
-              <div class="card-title" style="font-size:13px;font-weight:700;margin-bottom:4px;">Mountain Station</div>
-              <div class="card-desc">Gas, Diesel</div>
-            </div>
-            <div class="card" style="cursor:pointer;">
-              <div class="card-title" style="font-size:13px;font-weight:700;margin-bottom:4px;">KEVee Chargers</div>
-              <div class="card-desc">Electric only</div>
-            </div>
+          <div class="card-grid" id="map-garages-list">
+            <!-- Dynamically populated -->
           </div>
         </div>
 
         <!-- ========== RECOVERY ========== -->
         <div class="page" id="page-recovery">
-          <div class="recovery-hero">
-            <div class="hero-icon">🚨</div>
-            <div class="hero-title">Recovery Service</div>
-            <div class="hero-desc">Stuck, flipped, or broken down? Use the recovery service to get back on the road.
-            </div>
-            <div class="btn-group" style="justify-content:center;">
-              <button class="btn btn-primary">📍 Recover to Nearest Road</button>
+          <div class="status-banner">
+            <div class="banner-label">Roadside Assistance</div>
+            <div class="banner-title">Recovery Service</div>
+            <div class="banner-desc">Stuck, flipped, or broken down? Use the recovery service to get back on the road.
             </div>
           </div>
+
+          <!-- Recovery Status Bar -->
+          <div class="recovery-status-bar" id="recovery-status-bar">
+            <div class="recovery-stat">
+              <span class="rs-label">Balance</span>
+              <span class="rs-value" id="recovery-balance">--</span>
+            </div>
+            <div class="recovery-stat">
+              <span class="rs-label">Breakdown</span>
+              <span class="rs-value" id="recovery-insurance">--</span>
+            </div>
+            <div class="recovery-stat">
+              <span class="rs-label">Vehicle</span>
+              <span class="rs-value" id="recovery-vehicle-status">--</span>
+            </div>
+          </div>
+
+          <!-- Quick Recovery Actions -->
+          <div class="section-title">Quick Recovery</div>
+          <div class="card-grid" id="recovery-quick-actions">
+            <div class="card recovery-action-card" id="recovery-tow-road">
+              <div class="card-header">
+                <span class="card-title">🛣 Tow to Nearest Road</span>
+                <span class="card-badge ready" id="tow-road-badge">Available</span>
+              </div>
+              <div class="card-desc">Tow your vehicle to the nearest road. Vehicle must be moving slowly.</div>
+              <div class="recovery-price" id="tow-road-price">
+                <span class="price-amount">₿ 75</span>
+              </div>
+              <div class="recovery-reason" id="tow-road-reason" style="display:none;"></div>
+              <div class="btn-group">
+                <button class="btn btn-primary" id="btn-tow-road">Recover to Road</button>
+              </div>
+            </div>
+            <div class="card recovery-action-card" id="recovery-flip">
+              <div class="card-header">
+                <span class="card-title">🔄 Flip Upright</span>
+                <span class="card-badge ready" id="flip-badge">Available</span>
+              </div>
+              <div class="card-desc">Flip your vehicle back onto its wheels. Vehicle must be completely stopped.</div>
+              <div class="recovery-price" id="flip-price">
+                <span class="price-amount">₿ 50</span>
+              </div>
+              <div class="recovery-reason" id="flip-reason" style="display:none;"></div>
+              <div class="btn-group">
+                <button class="btn btn-primary" id="btn-flip">Flip Upright</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Garage Tow -->
           <div class="section-title">Garage Tow</div>
-          <div class="card-grid single">
-            <div class="card">
-              <div class="card-header">
-                <span class="card-title">🔧 Tow to Garage</span>
-                <span class="card-badge ready">Available</span>
-              </div>
-              <div class="card-desc">Tow your vehicle to a garage for immediate repairs. Select your destination:</div>
-              <div style="margin-top:10px;">
-                <select
-                  style="width:100%;padding:8px 12px;background:rgba(0,0,0,0.3);border:1px solid var(--border-card);border-radius:var(--radius-sm);color:var(--text-primary);font-family:inherit;font-size:12px;">
-                  <option>Belasco City Garage — $120</option>
-                  <option>Fast Automotive — $150</option>
-                  <option>Jerry Riggs — $95</option>
-                  <option>Commercial Garage (Large) — $200</option>
-                  <option>Commercial Garage (Small) — $180</option>
-                </select>
-              </div>
-              <div class="btn-group" style="margin-top:12px;">
-                <button class="btn btn-primary">Confirm Tow</button>
-              </div>
+          <div id="recovery-garage-list">
+            <div class="card" style="text-align:center;padding:24px;">
+              <div class="card-desc">Loading garages...</div>
             </div>
           </div>
-          <div class="section-title">Recovery Mod (Coming Soon)</div>
-          <div class="card-grid single">
-            <div class="card">
-              <div class="card-header">
-                <span class="card-title">Advanced Recovery</span>
-                <span class="card-badge offline">Not Installed</span>
+
+          <!-- Inline Confirmation Prompt -->
+          <div class="recovery-confirm-overlay" id="recovery-confirm-overlay" style="display:none;">
+            <div class="recovery-confirm-box">
+              <div class="rc-title" id="rc-title">Confirm Recovery</div>
+              <div class="rc-desc" id="rc-desc">Are you sure you want to proceed?</div>
+              <div class="rc-price" id="rc-price"></div>
+              <div class="btn-group" style="justify-content:center;">
+                <button class="btn btn-primary" id="rc-confirm">Confirm</button>
+                <button class="btn btn-outline" id="rc-cancel">Cancel</button>
               </div>
-              <div class="card-desc">The Recovery Mod will add tow trucks, flatbed trailers, winches, and a full
-                roadside assistance system. Stay tuned!</div>
             </div>
           </div>
         </div>
@@ -768,19 +715,19 @@
           <div class="card-grid triple">
             <div class="card">
               <div class="card-header"><span class="card-title">₿ BeamBucks</span></div>
-              <div class="card-value" style="color:var(--accent-green);">4,970.07</div>
+              <div class="card-value" style="color:var(--accent-green);" id="profile-beambucks">--</div>
             </div>
             <div class="card">
               <div class="card-header"><span class="card-title">⚡ XP</span></div>
-              <div class="card-value">65</div>
+              <div class="card-value" id="profile-xp">--</div>
             </div>
             <div class="card">
               <div class="card-header"><span class="card-title">🎰 Bonus Coins</span></div>
-              <div class="card-value">0</div>
+              <div class="card-value" id="profile-bonus">--</div>
             </div>
           </div>
           <div class="section-title">Career Paths</div>
-          <div class="card-grid">
+          <div class="card-grid" id="career-paths-grid">
             <div class="card">
               <div class="card-header"><span class="card-title">🏁 Motorsports</span><span
                   class="card-badge pending">Level 1</span></div>
@@ -816,20 +763,8 @@
           </div>
           <div class="section-title">Earnings History</div>
           <div id="profile-history">
-            <div class="activity-item">
-              <div class="activity-icon success">✓</div>
-              <div class="activity-text">Today — 7 jobs completed</div>
-              <div class="activity-amount positive">+$2,350</div>
-            </div>
-            <div class="activity-item">
-              <div class="activity-icon success">✓</div>
-              <div class="activity-text">Yesterday — 5 jobs completed</div>
-              <div class="activity-amount positive">+$1,890</div>
-            </div>
-            <div class="activity-item">
-              <div class="activity-icon info">i</div>
-              <div class="activity-text">2 days ago — Insurance & repairs</div>
-              <div class="activity-amount negative">-$420</div>
+            <div class="activity-item" style="justify-content: center; opacity: 0.5; padding: 20px;">
+              <div class="activity-text" style="font-style: italic;">Transaction history to be added in a future update...</div>
             </div>
           </div>
         </div>
@@ -845,23 +780,36 @@
           <div class="setting-row">
             <div class="setting-info"><span class="setting-label">Reposition Mode</span><span class="setting-desc">Click
                 and drag to move the tablet around the screen</span></div>
-            <div class="toggle" id="toggle-reposition" onclick="toggleSwitch(this)"></div>
+            <div class="toggle" id="toggle-reposition" data-setting="reposition"></div>
           </div>
           <div class="setting-row">
-            <div class="setting-info"><span class="setting-label">Resize Mode</span><span class="setting-desc">Drag the
-                edges to resize the tablet window</span></div>
-            <div class="toggle" id="toggle-resize" onclick="toggleSwitch(this)"></div>
+            <div class="setting-info"><span class="setting-label">Resize Mode</span><span class="setting-desc">Drag
+                left/right to resize the tablet window</span></div>
+            <div class="toggle" id="toggle-resize" data-setting="resize"></div>
           </div>
           <div class="section-title">Display</div>
           <div class="setting-row">
             <div class="setting-info"><span class="setting-label">Distance in Miles</span><span
                 class="setting-desc">Switch distance units from kilometers to miles</span></div>
-            <div class="toggle" id="toggle-miles" onclick="toggleSwitch(this)"></div>
+            <div class="toggle" id="toggle-miles" data-setting="miles"></div>
           </div>
           <div class="setting-row">
             <div class="setting-info"><span class="setting-label">Notifications</span><span class="setting-desc">Show
                 on-screen alerts for job updates, earnings, and events</span></div>
-            <div class="toggle on" id="toggle-notifications" onclick="toggleSwitch(this)"></div>
+            <div class="toggle on" id="toggle-notifications" data-setting="notifications"></div>
+          </div>
+          <div class="setting-row">
+            <div class="setting-info"><span class="setting-label">Notification Position</span><span
+                class="setting-desc">Choose which corner of the screen to show notifications</span></div>
+            <div class="custom-dropdown" id="notif-position-dropdown">
+              <div class="dropdown-selected" id="notif-position-selected">Bottom Right</div>
+              <div class="dropdown-options" id="notif-position-options">
+                <div class="dropdown-option active" data-value="bottom-right">Bottom Right</div>
+                <div class="dropdown-option" data-value="bottom-left">Bottom Left</div>
+                <div class="dropdown-option" data-value="top-right">Top Right</div>
+                <div class="dropdown-option" data-value="top-left">Top Left</div>
+              </div>
+            </div>
           </div>
           <div class="section-title">About</div>
           <div class="card" style="margin-top:8px;">
@@ -879,4 +827,15 @@
       </main>
     </div>
   </div>
+
+  <!-- Toast Prompt Overlay -->
+  <div class="toast-overlay" id="toast-overlay">
+    <div class="toast-prompt">
+      <span class="toast-text" id="toast-text">Drag to adjust</span>
+      <button class="btn btn-success toast-btn" id="toast-confirm">Confirm</button>
+      <button class="btn btn-outline toast-btn" id="toast-cancel">Cancel</button>
+    </div>
+  </div>
+  <!-- Notification Popup Container -->
+  <div class="notif-container notif-pos-bottom-right" id="notif-container"></div>
 </div>

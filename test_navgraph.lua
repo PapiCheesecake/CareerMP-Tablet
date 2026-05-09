@@ -1,0 +1,1 @@
+local m = map.getMap(); local edges = {}; for n1, node in pairs(m.nodes) do for n2, link in pairs(node.links) do if n1 < n2 then table.insert(edges, {m.nodes[n1].pos.x, m.nodes[n1].pos.y, m.nodes[n2].pos.x, m.nodes[n2].pos.y}) end end end; local s = serialize(edges); print('Edges: ' .. #edges .. ' Length: ' .. string.len(s))
