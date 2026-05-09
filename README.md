@@ -4,39 +4,39 @@ CareerMP Tablet is a UI overlay for the CareerMP mod in BeamNG.drive. It provide
 
 ## Features
 
-- Home dashboard with active job status, vehicle summary, career progress, and recent activity
-- Job browser with facility-based work listings and delivery missions
-- Task and mission overview for goals and objectives
-- Vehicle management screen for garage and fleet information
-- Interactive map/navigation page
-- Recovery and roadside assistance panel
-- Profile and settings pages for personalization and preferences
-- In-game notification support and persistent UI settings
+- Home dashboard with active job status, vehicle summary, career progress, and recent activity -- todo
+- Job browser with facility-based work listings and delivery missions -- todo
+- Task and mission overview for goals and objectives -- todo
+- Vehicle management screen for garage and fleet information -- todo
+- Interactive map/navigation page -- in progress
+- Recovery and roadside assistance panel -- done
+- Profile and settings pages for personalization and preferences -- done
+- In-game notification support and persistent UI settings -- done
 
 ## Requirements
 
-- BeamNG.drive
-- CareerMP mod installed
-- This CareerMP Tablet mod installed alongside CareerMP
+- BeamMP
+- CareerMP -- todo
 
 ## Installation
 
-1. Download or clone this repository.
-2. Copy the `CareerMP-Tablet` mod folder into your BeamNG.drive `mods/` directory.
-   - If you are installing from a zip archive, extract the archive first.
-3. Launch BeamNG.drive and enable the mod in the mod manager.
-4. Load CareerMP and open the CareerMP Tablet app from the CareerMP UI.
+1. Download latest release.
+2. Copy the `CareerMP-Tablet.zip` zip into your server `Resources/Client/` directory.
+3. Launch BeamMP-Server
+4. Launch BeamMP and join your server and set a bind for the tablet, you might need to manually add the ui also.
 
 ## Usage
 
-- Open the CareerMP Tablet app from the CareerMP interface.
+- Open the CareerMP Tablet app using the bind you set.
 - Use the sidebar to switch between Home, Jobs, Tasks, Vehicles, Map, Recovery, Profile, and Settings.
 - Review your current career status, active jobs, and vehicle information at a glance.
 - Adjust notification preferences and tablet layout in the Settings page.
+- Use the map for quick navigation.
 
 ## Standalone Preview
 
-A preview of the tablet UI is available in `standalone-preview/`.
+A preview of the tablet UI is available in `standalone-preview`.
+This isnt going to be functional in any way, it was a way for me to visualise the idea.
 
 ## Contributing
 
@@ -47,6 +47,10 @@ Contributions are welcome! If you want to add new tablet features, improve the U
 3. Submit a pull request with a clear description of your changes.
 
 Please include any relevant screenshots or notes for UI changes.
+
+## AI Usage
+
+I have used AI in the making of this mod. However, as i learn more not only will that be used less. I will be going over and re-writing the code to fix any issues this caused.
 
 ## License
 
