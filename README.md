@@ -7,8 +7,8 @@ CareerMP Tablet is a UI overlay for the CareerMP mod in BeamNG.drive. It provide
 - Home dashboard with active job status, vehicle summary, career progress, and recent activity -- todo
 - Job browser with facility-based work listings and delivery missions -- todo
 - Task and mission overview for goals and objectives -- todo
-- Vehicle management screen for garage and fleet information -- todo
-- Interactive map/navigation page -- in progress
+- Vehicle management screen for garage and fleet information -- in progress
+- Interactive map/navigation page -- done
 - Recovery and roadside assistance panel -- done
 - Profile and settings pages for personalization and preferences -- done
 - In-game notification support and persistent UI settings -- done
