@@ -564,19 +564,36 @@
         <div class="page" id="page-vehicles">
           <div class="status-banner">
             <div class="banner-label">Garage</div>
-            <div class="banner-title" id="vehicles-title">Your Fleet</div>
-            <div class="banner-desc" id="vehicles-desc">Manage your vehicles, check condition, and handle repairs.</div>
+            <div class="banner-title">Your Fleet</div>
+            <div class="banner-desc">Manage your vehicles, check condition, and handle repairs.</div>
           </div>
-          <div class="section-title" id="vehicles-current-title">🚗 Current Vehicle</div>
-          <div id="vehicles-current-list">
-            <!-- Dynamically populated -->
-            <div class="card" style="text-align:center;padding:24px;">
-              <div class="card-desc">Loading vehicle data...</div>
+          <div class="section-title">Current Vehicle (Spawned)</div>
+          <div class="vehicle-card">
+            <div class="vehicle-name">Ibishu Covet</div>
+            <div class="vehicle-type">Economy Hatchback</div>
+            <div class="vehicle-stats">
+              <div class="vehicle-stat"><span class="vs-label">Body</span><span class="vs-value good">95%</span></div>
+              <div class="vehicle-stat"><span class="vs-label">Engine</span><span class="vs-value good">100%</span>
+              </div>
+              <div class="vehicle-stat"><span class="vs-label">Tyres</span><span class="vs-value good">88%</span></div>
+              <div class="vehicle-stat"><span class="vs-label">Fuel</span><span class="vs-value good">92%</span></div>
             </div>
           </div>
-          <div class="section-title" id="vehicles-garage-title" style="display:none;">🏠 Garage</div>
-          <div id="vehicles-garage-list">
-            <!-- Dynamically populated -->
+          <div class="section-title">Garage (1 Stored)</div>
+          <div class="vehicle-card">
+            <div class="vehicle-name">Ibishu Pessima</div>
+            <div class="vehicle-type">Economy Sedan • 1996</div>
+            <div class="vehicle-stats">
+              <div class="vehicle-stat"><span class="vs-label">Body</span><span class="vs-value warn">71%</span></div>
+              <div class="vehicle-stat"><span class="vs-label">Engine</span><span class="vs-value good">85%</span></div>
+              <div class="vehicle-stat"><span class="vs-label">Tyres</span><span class="vs-value bad">32%</span></div>
+              <div class="vehicle-stat"><span class="vs-label">Fuel</span><span class="vs-value warn">45%</span></div>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-primary">Repair Vehicle</button>
+              <button class="btn btn-outline">View Parts</button>
+              <button class="btn btn-outline">Insurance</button>
+            </div>
           </div>
         </div>
 

@@ -33,7 +33,6 @@ local function refreshTablet()
   if M.pushDataToUI then M.pushDataToUI() end
   if M.getRecoveryData then M.getRecoveryData() end
   if M.getProfileData then M.getProfileData() end
-  if M.getVehicleData then M.getVehicleData() end
 end
 
 -- Refreshes all resource intensive tablet data at once (add future Phase 2 hooks here)
@@ -746,115 +745,6 @@ local function getPlayerPosition()
   return nil
 end
 M.getPlayerPosition = getPlayerPosition
-
--- ===== Vehicle Inventory Data =====
-local function getVehicleData()
-  local data = {
-    vehicles = {},
-    currentVehicleId = nil,
-    freeSlots = 0
-  }
-
-  if not career_modules_inventory then
-    guihooks.trigger('careerMPTabletVehicleData', data)
-    return
-  end
-
-  local vehicles = career_modules_inventory.getVehicles()
-  if not vehicles then
-    guihooks.trigger('careerMPTabletVehicleData', data)
-    return
-  end
-
-  -- Get currently active vehicle inventory ID
-  local currentInvId = career_modules_inventory.getCurrentVehicle()
-  data.currentVehicleId = currentInvId
-
-  for invId, vData in pairs(vehicles) do
-    local vehEntry = {
-      id = invId,
-      name = vData.niceName or ("Vehicle " .. tostring(invId)),
-      model = vData.model or "unknown",
-      licensePlate = "",
-      isCurrent = (invId == currentInvId),
-      isSpawned = (career_modules_inventory.getVehicleIdFromInventoryId(invId) ~= nil),
-      owned = vData.owned or false,
-      needsRepair = false,
-      isInsured = false,
-      value = 0,
-      mileage = 0,
-      thumbnail = nil,
-      overallCondition = 100,
-      loanType = vData.loanType or nil
-    }
-
-    -- License plate
-    if vData.config and vData.config.licenseName then
-      vehEntry.licensePlate = vData.config.licenseName
-    end
-
-    -- Vehicle value
-    if career_modules_valueCalculator and career_modules_valueCalculator.getInventoryVehicleValue then
-      local ok, val = pcall(career_modules_valueCalculator.getInventoryVehicleValue, invId)
-      if ok and val then vehEntry.value = math.floor(val * 100) / 100 end
-    end
-
-    -- Mileage
-    if career_modules_valueCalculator and career_modules_valueCalculator.getVehicleMileageById then
-      local ok, miles = pcall(career_modules_valueCalculator.getVehicleMileageById, invId)
-      if ok and miles then vehEntry.mileage = math.floor(miles) end
-    end
-
-    -- Thumbnail
-    if career_modules_inventory.getVehicleThumbnail then
-      local ok, thumb = pcall(career_modules_inventory.getVehicleThumbnail, invId)
-      if ok and thumb then vehEntry.thumbnail = thumb end
-    end
-
-    -- Insurance
-    if career_modules_insurance_insurance and career_modules_insurance_insurance.getVehInsuranceInfo then
-      local ok, info = pcall(career_modules_insurance_insurance.getVehInsuranceInfo, invId)
-      if ok and info then
-        vehEntry.isInsured = info.isInsured or false
-      end
-    end
-
-    -- Needs repair
-    if career_modules_insurance_insurance and career_modules_insurance_insurance.inventoryVehNeedsRepair then
-      local ok, needs = pcall(career_modules_insurance_insurance.inventoryVehNeedsRepair, invId)
-      if ok then vehEntry.needsRepair = needs or false end
-    end
-
-    -- Overall condition from part conditions
-    if vData.partConditions then
-      local totalHealth = 0
-      local partCount = 0
-      for partName, cond in pairs(vData.partConditions) do
-        if type(cond) == "table" then
-          -- Each part has odometer, integrityValue, integrityState, visualValue, visualState etc.
-          local integrity = cond.integrityValue or cond.integrity or 1
-          totalHealth = totalHealth + integrity
-          partCount = partCount + 1
-        end
-      end
-      if partCount > 0 then
-        vehEntry.overallCondition = math.floor((totalHealth / partCount) * 100)
-      end
-    end
-
-    table.insert(data.vehicles, vehEntry)
-  end
-
-  -- Sort: current vehicle first, then spawned, then stored
-  table.sort(data.vehicles, function(a, b)
-    if a.isCurrent ~= b.isCurrent then return a.isCurrent end
-    if a.isSpawned ~= b.isSpawned then return a.isSpawned end
-    return (a.name or "") < (b.name or "")
-  end)
-
-  guihooks.trigger('careerMPTabletVehicleData', data)
-end
-M.getVehicleData = getVehicleData
 
 M.toggleTablet = toggleTablet
 M.showTablet = showTablet

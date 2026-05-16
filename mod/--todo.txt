@@ -1,0 +1,3 @@
+-- clear map cache after each time you close game?
+-- make ALL roads appear on the map as it appears a little missing with roads not finised etc.
+-- add a cencel map navigates
